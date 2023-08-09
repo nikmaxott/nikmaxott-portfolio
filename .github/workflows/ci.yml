@@ -11,5 +11,5 @@ jobs:
           node-version: "18"
           cache: "npm"
       - run: npm ci
-      - run: npx eslint "./src/**/*.{ts,html}"
-      - run: npx prettier check  "./src/**/*.{ts,html,css}"
+      - run: npx eslint src/**/*.{ts,html}
+      - run: npx prettier --check  src/**/*.{ts,html,css}
