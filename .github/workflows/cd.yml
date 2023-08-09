@@ -15,4 +15,4 @@ jobs:
                 node-version: "18"
                 cache: "npm"
             - run: npm ci
-            - run: npm run build -- --prod
+            - run: npm run build -- --optimization --base-href '/nikmaxott-portfolio/'
