@@ -1,12 +1,22 @@
 <body [ngClass]="{ dark: isDarkEnable }">
-  <div class="dark:bg-gray-600 bg-white">
+  <div class="dark:bg-gray-600 bg-white min-h-screen">
     <header class="flex justify-between p-3 bg-gra dark:bg-gray-900">
-      <div class="text-lg dark:text-white text-gray-400 min-h-50 flex items-center">
+      <div
+        class="text-lg dark:text-white text-gray-400 min-h-50 flex items-center"
+      >
         <img
           src="https://i0.wp.com/www.nikmaxott.org/wp-content/uploads/2022/11/IMG-20221106-WA0000.jpg?resize=100%2C50&ssl=1"
-          alt="NIKMAXOTT logo" />
+          alt="NIKMAXOTT logo"
+        />
       </div>
-      <nav>
+      <nav class="flex items-center">
+        <button
+          (click)="toggleDarkMode()"
+          class="mr-4 p-2 hover:scale-125 transition-transform ease-in-out delay-75"
+        >
+          <i *ngIf="isDarkEnable" class="ri-sun-line text-white"></i
+          ><i *ngIf="!isDarkEnable" class="ri-moon-fill text-black"></i>
+        </button>
         <ul class="flex mr-4">
           <li class="m-2 dark:text-white text-gray-900">
             <a href="#about">About</a>
@@ -20,7 +30,9 @@
         </ul>
       </nav>
     </header>
-    <section class="m-4 p-12 border rounded border-gray-700 dark:border-gray-200 h-full min-h-min">
+    <section
+      class="m-4 p-8 border rounded border-gray-700 dark:border-gray-200 mb-0"
+    >
       <app-home></app-home>
     </section>
   </div>

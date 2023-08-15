@@ -21,4 +21,9 @@ export class AppComponent {
       this.isDarkEnable = false;
     }
   }
+
+  toggleDarkMode() {
+    this.isDarkEnable = !this.isDarkEnable;
+    localStorage.setItem('theme', this.isDarkEnable ? 'dark' : 'light');
+  }
 }
