@@ -93,8 +93,7 @@
         }
       },
       "i18n": {
-        "sourceLocale": "en-US",
-
+        "sourceLocale": { "code": "en-US", "baseHref": "" },
         "locales": {
           "de": {
             "translation": "/src/locale/messages.de.xliff",
