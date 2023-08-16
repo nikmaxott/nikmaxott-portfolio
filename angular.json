@@ -20,7 +20,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
-            "scripts": []
+            "scripts": [],
+            "localize": true
           },
           "configurations": {
             "production": {
@@ -81,6 +82,14 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
+        }
+      },
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "de": {
+            "translation": "/src/locales/messages.de.xlf"
           }
         }
       }
