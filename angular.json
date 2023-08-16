@@ -89,7 +89,7 @@
         "sourceLocale":"en-US",
         "locales": {
           "de": {
-            "translation": "/src/locale/messages.de.xlf"
+            "translation": "/src/locale/messages.de.xliff"
           }
         }
       }
