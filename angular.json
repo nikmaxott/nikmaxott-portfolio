@@ -20,11 +20,14 @@
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
-            "scripts": [],
-            "localize": true
+            "scripts": []
           },
           "configurations": {
+            "de": {
+              "localize": ["de"]
+            },
             "production": {
+              "localize": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -45,7 +48,8 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "localize": false
             }
           },
           "defaultConfiguration": "production"
@@ -53,6 +57,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "de": {
+              "browserTarget": "nikmaxott-portfolio:build:development,de"
+            },
             "production": {
               "browserTarget": "nikmaxott-portfolio:build:production"
             },
@@ -86,10 +93,12 @@
         }
       },
       "i18n": {
-        "sourceLocale":"en-US",
+        "sourceLocale": "en-US",
+
         "locales": {
           "de": {
-            "translation": "/src/locale/messages.de.xliff"
+            "translation": "/src/locale/messages.de.xliff",
+            "baseHref": "de"
           }
         }
       }
