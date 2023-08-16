@@ -32,13 +32,13 @@ jobs:
           node-version: "18"
           cache: "npm"
       - run: npm ci
-      - run: npm run build -- --optimization --base-href '/nikmaxott-portfolio/en-US'
+      - run: npm run build -- --optimization --base-href '/nikmaxott-portfolio/'
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: "./dist/nikmaxott-portfolio/"
+          path: "./dist/nikmaxott-portfolio/en-US/"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
