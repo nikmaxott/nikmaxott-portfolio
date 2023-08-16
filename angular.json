@@ -23,7 +23,11 @@
             "scripts": []
           },
           "configurations": {
+            "de": {
+              "localize": ["de"]
+            },
             "production": {
+              "localize": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -44,7 +48,8 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "localize": false
             }
           },
           "defaultConfiguration": "production"
@@ -52,6 +57,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "de": {
+              "browserTarget": "nikmaxott-portfolio:build:development,de"
+            },
             "production": {
               "browserTarget": "nikmaxott-portfolio:build:production"
             },
@@ -81,6 +89,15 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
+        }
+      },
+      "i18n": {
+        "sourceLocale": { "code": "en-US", "baseHref": "en" },
+        "locales": {
+          "de": {
+            "translation": "/src/locale/messages.de.xliff",
+            "baseHref": "de"
           }
         }
       }

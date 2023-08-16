@@ -1,3 +1,5 @@
+[![Deploy](https://github.com/nikmaxott/nikmaxott-portfolio/actions/workflows/cd.yml/badge.svg?branch=main)](https://github.com/nikmaxott/nikmaxott-portfolio/actions/workflows/cd.yml)
+
 # NikmaxottPortfolio
 This project is a very simple CV and Portfolio Project
 
