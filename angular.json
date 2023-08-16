@@ -27,7 +27,6 @@
               "localize": ["de"]
             },
             "production": {
-              "localize": true,
               "budgets": [
                 {
                   "type": "initial",
