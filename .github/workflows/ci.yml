@@ -13,4 +13,4 @@ jobs:
       - run: npm ci
       - run: npx eslint src/**/*.{ts,html}
       - run: npx prettier --check  src/**/*.{ts,html,css}
-      - run: npm run test
+      - run: ng test --no-watch --no-progress
