@@ -16,6 +16,13 @@ describe('HomeComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
+  });
+
+  it('Should have an image with alt', () => {
+    const img = fixture.nativeElement.querySelector('img');
+    expect(img.alt).toBe(
+      'A portrait of me, with fancy bokeh swirls, wearing graduation robes and cap, with a glass of champagne',
+    );
   });
 });

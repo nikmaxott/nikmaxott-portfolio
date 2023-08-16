@@ -1,33 +1,41 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 describe('AppComponent', () => {
-  beforeEach(() =>
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HomeComponent],
       declarations: [AppComponent],
-    }),
-  );
-
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    });
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
-  it('should have a navigation bar with 3 links', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+  it('should create the app', () => {
+    expect(component).toBeDefined();
   });
 
   it('should have the dark mode toggle default', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    expect(component.isDarkEnable).toBeFalse();
   });
 
-  it('should be able to toggle dark mode', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-  });
+  it('should be able to toggle dark mode', fakeAsync(() => {
+    spyOn(component, 'toggleDarkMode');
+
+    // Component toggle tests
+    component.toggleDarkMode();
+    expect(component.isDarkEnable).toBeFalse();
+
+    // DOM Test
+    const button: HTMLButtonElement =
+      fixture.nativeElement.querySelector('button');
+    button.dispatchEvent(new Event('click'));
+
+    expect(component.toggleDarkMode).toHaveBeenCalledTimes(2);
+  }));
 });
