@@ -6,6 +6,13 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    data: {
+      seo: {
+        title: 'Nikolaus Zolnhofer Online CV',
+        description:
+          'Hi, I am a 24 year old Software Engineer that specialises in Fullstack Development using React, Ruby on Rails, Angular, Node.js',
+      },
+    },
   },
 ];
 
