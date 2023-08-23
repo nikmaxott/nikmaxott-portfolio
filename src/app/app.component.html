@@ -2,22 +2,24 @@
   <div
     class="dark:bg-gray-600 bg-white min-h-screen dark:text-white text-gray-900"
   >
-    <header class="flex justify-between p-3 bg-gray-300 dark:bg-gray-900">
-      <div class="text-lg min-h-50 flex items-center">
+    <header
+      class="flex justify-center md:justify-between p-3 bg-gray-300 dark:bg-gray-900"
+    >
+      <div class="items-center md:block hidden">
         <img
           src="https://i0.wp.com/www.nikmaxott.org/wp-content/uploads/2022/11/IMG-20221106-WA0000.jpg?resize=100%2C50&ssl=1"
           alt="NIKMAXOTT logo"
         />
       </div>
-      <nav class="flex items-center">
+      <nav class="flex items-center mr-4">
         <button
           (click)="toggleDarkMode()"
-          class="mr-4 p-2 hover:scale-125 transition-transform ease-in-out delay-75"
+          class="mr-4 m-2 hover:scale-125 transition-transform ease-in-out delay-75"
         >
           <i *ngIf="isDarkEnable" class="ri-sun-line text-white"></i
           ><i *ngIf="!isDarkEnable" class="ri-moon-fill text-black"></i>
         </button>
-        <ul class="flex mr-4">
+        <ul class="flex">
           <li class="m-2">
             <a i18n href="#about">About</a>
           </li>
@@ -29,7 +31,7 @@
           </li>
           <li class="m-2">
             <a
-              href="/assets/cv_22_08_2023.pdf"
+              href="/assets/cv_23_08_2023.pdf"
               target="_blank"
               download="Nikolaus Zolnhofer CV.pdf"
               ><i class="ri-printer-line"></i
