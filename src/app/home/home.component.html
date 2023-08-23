@@ -9,7 +9,7 @@
       alt="A portrait of me, with fancy bokeh swirls, wearing graduation robes and cap, with a glass of champagne"
     />
 
-    <h2 i18n class="text-xl mt-4 mb-2">About me</h2>
+    <h2 i18n class="text-xl mt-4 mb-2" id="about">About me</h2>
     <p i18n>
       I'm a 24 year old tech enthusiast, based in the North East of Scotland. I
       enjoy problem solving, and working with the latest tech to create
@@ -42,21 +42,27 @@
     <article class="mt-4">
       <h3 i18n class="text-lg">Software Packages</h3>
       <div class="flex content-center flex-wrap">
-        <a href="https://www.figma.com/" target="_blank"
-          >Figma<i class="ri-external-link-line"></i></a
-        >,
-        <a href="https://www.docker.com/" target="_blank"
-          >Docker<i class="ri-external-link-line"></i></a
-        >,
-        <a href="https://github.com/features/actions" target="_blank"
-          >Github Actions CI/CD<i class="ri-external-link-line"></i></a
-        >,
-        <a href="https://uk.mathworks.com/products/matlab.html" target="_blank"
-          >MATLAB<i class="ri-external-link-line"></i></a
-        >,
-        <a href="https://www.solidworks.com/" target="_blank"
-          >SolidWorks<i class="ri-external-link-line"></i
-        ></a>
+        <a href="https://www.figma.com/" class="underline" target="_blank"
+          >Figma</a
+        ><i class="ri-external-link-line"></i>,
+        <a href="https://www.docker.com/" class="underline" target="_blank"
+          >Docker</a
+        ><i class="ri-external-link-line"></i>,
+        <a
+          href="https://github.com/features/actions"
+          class="underline"
+          target="_blank"
+          >Github Actions CI/CD</a
+        ><i class="ri-external-link-line"></i>,
+        <a
+          href="https://uk.mathworks.com/products/matlab.html"
+          class="underline"
+          target="_blank"
+          >MATLAB</a
+        ><i class="ri-external-link-line"></i>,
+        <a href="https://www.solidworks.com/" class="underline" target="_blank"
+          >SolidWorks</a
+        ><i class="ri-external-link-line"></i>
       </div>
     </article>
 
@@ -72,7 +78,7 @@
   >
     <h2 i18n class="text-xl">Timeline</h2>
     <article class="mt-2">
-      <div class="flex justify-between flex-col-reverse lg:flex-row">
+      <div class="flex justify-between flex-col-reverse md:flex-row">
         <h3 class="text-lg">Software Developer at AEON Geoscience Systems</h3>
         <p class="italic text-gray-600 dark:text-gray-300 mr-8">
           September 2022 - August 2023
@@ -86,7 +92,8 @@
         <li>
           Using D3.js package to create numerous graphs, well log tracks and
           data dashboards to enable the visualisation and comparison of complex
-          datasets as part of a £70k+ client project.
+          datasets as part of a £70k+ client project shortly before my
+          redundancy.
         </li>
         <li>
           Overhauled the visual design of the application using Figma as a quick
@@ -95,16 +102,16 @@
         </li>
         <li>
           Implemented a completely new self sign up process including email
-          confirmation with SendGrid API.
+          confirmation with SendGrid API
         </li>
         <li>
           Set up full build, linting, and testing pipelines as well as docker
-          containerisation of the application.
+          containerisation of the application
         </li>
       </ul>
     </article>
     <article class="mt-2">
-      <div class="flex justify-between">
+      <div class="flex justify-between flex-col-reverse md:flex-row">
         <h3 class="text-lg">IT & Business Support at DK AVS</h3>
         <p class="italic text-gray-600 dark:text-gray-300 mr-8">
           June 2018 - September 2022
@@ -113,7 +120,7 @@
       <ul class="list-disc ml-4">
         <li>
           Worked extensively in React, HTML, CSS, ES2023 JavaScript, and Redux
-          to improve company's web systems.
+          to improve company’s web systems.
         </li>
         <li>
           Streamlined job-request process, resulting in 1200+ TV repair being
@@ -122,36 +129,42 @@
         </li>
         <li>
           Managed overhaul and implementation of the company's entire Enterprise
-          Resource Planning system, including writing proposals for key clients
-          and supporting them in a transition period. Delivering the project
+          Resource Planning system, including written proposals for key clients
+          and oncall support during transition period. Delivering the project
           from inception to completion.
         </li>
         <li>
-          Implemented a completely new self sign up process including email
-          confirmation with SendGrid API.
+          Acted as a Senior Developer by consulting external clients in setting
+          up new ERP & CRM System in Superbase NG, migrating from Superbase
+          Classic
         </li>
         <li>
-          Initiated online campaign bringing in 4k users on to DK AVS website
-          leading to 20% increase in the first time customer service request.
+          Initiated online campaign bringing in 4000 new users on to DK AVS
+          website leading to 20% increase in the first time customer service
+          request.
         </li>
       </ul>
     </article>
 
-    <article title="My Projects">
+    <article title="My Projects" id="projects">
       <h2 i18n class="text-xl mt-4">My Projects</h2>
 
       <h3 i18n class="text-lg mt-2">Superbase Shop - SaaS Shop Design</h3>
       <p>
-        A project where I used Gatsby.JS to create a static site, showcasing
-        several key products of the Superbase brand. This project was a nice
-        challenge and a change of pace from my normal work at the time, and
-        showcases my stylistic choices, preferring a minimal look.
+        A project where I used Gatsby.JS to create a static site, hosted
+        on-premises. The site showcases several key products of the Superbase
+        brand. This project was a nice challenge and a change of pace from my
+        normal work at the time, and showcases my stylistic choices, preferring
+        a minimal look.
       </p>
       <p class="mt-8 mb-8">
         Live Link:
-        <a href="https://shop.superbase.com/" target="_blank"
-          >shop.superbase.com <i class="ri-external-link-line"></i
-        ></a>
+        <a
+          href="https://shop.superbase.com/"
+          class="underline mr-1"
+          target="_blank"
+          >shop.superbase.com</a
+        ><i class="ri-external-link-line"></i>
       </p>
       <img
         src="https://i0.wp.com/www.nikmaxott.org/wp-content/uploads/2022/07/image-2.png?resize=635%2C1024&ssl=1"
@@ -167,15 +180,19 @@
       </p>
       <p class="mt-8">
         Link to Git Repo:
-        <a href="https://github.com/nikmaxott/sunnyside-agency-landing-page"
-          >Github <i class="ri-external-link-line"></i
-        ></a>
+        <a
+          href="https://github.com/nikmaxott/sunnyside-agency-landing-page"
+          class="underline mr-1"
+          >Github</a
+        ><i class="ri-external-link-line"></i>
       </p>
       <p class="mb-8">
         Link to:
-        <a href="https://nikmaxott.github.io/sunnyside-agency-landing-page/"
-          >Website <i class="ri-external-link-line"></i
-        ></a>
+        <a
+          href="https://nikmaxott.github.io/sunnyside-agency-landing-page/"
+          class="underline mr-1"
+          >Website</a
+        ><i class="ri-external-link-line"></i>
       </p>
 
       <img
@@ -215,19 +232,28 @@
 
         <h4 class="text-lg mt-4">Links</h4>
         <p>
-          <a href="https://www.dkavs.co.uk/" target="_blank"
-            >www.dkavs.co.uk <i class="ri-external-link-line"></i
-          ></a>
+          <a
+            href="https://www.dkavs.co.uk/"
+            target="_blank"
+            class="underline mr-1"
+            >www.dkavs.co.uk</a
+          ><i class="ri-external-link-line"></i>
         </p>
         <p>
-          <a href="https://www.superbase.com/" target="_blank"
-            >www.superbase.com <i class="ri-external-link-line"></i
-          ></a>
+          <a
+            href="https://www.superbase.com/"
+            target="_blank"
+            class="underline mr-1"
+            >www.superbase.com</a
+          ><i class="ri-external-link-line"></i>
         </p>
         <p>
-          <a href="https://www.simpol.com/" target="_blank"
-            >www.simpol.com <i class="ri-external-link-line"></i
-          ></a>
+          <a
+            href="https://www.simpol.com/"
+            target="_blank"
+            class="underline mr-1"
+            >www.simpol.com</a
+          ><i class="ri-external-link-line"></i>
         </p>
       </div>
     </article>
