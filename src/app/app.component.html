@@ -3,7 +3,7 @@
     class="dark:bg-gray-600 bg-white min-h-screen dark:text-white text-gray-900"
   >
     <header
-      class="flex justify-center md:justify-between p-3 bg-gray-300 dark:bg-gray-900"
+      class="flex justify-center md:justify-between p-3 bg-gray-300 dark:bg-gray-900 print:hidden"
     >
       <div class="items-center md:block hidden">
         <img
@@ -11,7 +11,7 @@
           alt="NIKMAXOTT logo"
         />
       </div>
-      <nav class="flex items-center mr-4 print:hidden">
+      <nav class="flex items-center mr-4">
         <button
           (click)="toggleDarkMode()"
           class="mr-4 m-2 hover:scale-125 transition-transform ease-in-out delay-75"
@@ -32,22 +32,17 @@
             >
           </li>
           <li class="m-2">
-            <a
-              href="/assets/cv_23_08_2023.pdf"
-              target="_blank"
-              download="Nikolaus Zolnhofer CV.pdf"
-              ><i class="ri-printer-line"></i
-            ></a>
+            <button onclick="print()"><i class="ri-printer-line"></i></button>
           </li>
         </ul>
       </nav>
     </header>
     <section
-      class="m-4 p-2 lg:p-8 border rounded border-gray-700 dark:border-gray-200 mb-0"
+      class="m-4 p-2 lg:p-8 border rounded border-gray-700 dark:border-gray-200 mb-0 print print:m-0 print:p-0 print:border-0"
     >
       <app-home></app-home>
     </section>
-    <footer>
+    <footer class="print:hidden">
       <div
         class="flex justify-between p-3 ml-4 mr-4 flex-col-reverse lg:flex-row"
       >
