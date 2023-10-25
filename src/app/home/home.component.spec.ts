@@ -22,7 +22,7 @@ describe('HomeComponent', () => {
   it('Should have an image with alt', () => {
     const img = fixture.nativeElement.querySelector('img');
     expect(img.alt).toBe(
-      'A portrait of me, with fancy bokeh swirls, wearing graduation robes and cap, with a glass of champagne',
+      'A portrait of me, wearing a blue jumper with a collared patterned shirt',
     );
   });
 });
