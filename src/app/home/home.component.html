@@ -1,49 +1,53 @@
 <div
-  class="flex justify-between flex-col lg:flex-row-reverse text-black dark:text-white print:text-sm"
+  class="flex justify-between flex-col lg:flex-row-reverse text-black dark:text-white print:text-sm border rounded border-gray-700 dark:border-gray-200 print:border-0"
 >
-  <div class="lg:w-1/2 p-4">
+  <div class="lg:w-1/2 px-6 py-4 print:p-0">
     <h1 i18n class="text-2xl mt-2">Hi my name is Nikolaus!</h1>
     <img
       src="https://www.nikmaxott.org/wp-content/uploads/2023/09/Nikolaus-3.jpg"
-      class="rounded-[50%] object-cover m-2 lg:m-8 lg:mr-16 print:hidden"
+      class="rounded-[50%] object-cover m-2 lg:m-8 lg:mr-16 print:hidden w-64 h-64 lg:w-96 lg:h-96"
       alt="A portrait of me, wearing a blue jumper with a collared patterned shirt"
     />
 
     <h2 i18n class="text-xl mt-4 mb-2 font-bold" id="about">About me</h2>
     <p i18n>
-      I'm a passionate tech enthusiast, based in the North East of Scotland. I
-      enjoy problem solving, and have a proven track record of delivering
-      quality work using latest tech to create solutions to help people in their
-      day to day across a range of industries.
+      I'm a passionate Software Developer with a proven track record of
+      consistently delivering top-tier solutions across diverse software
+      development domains. A goal-oriented approach to work, able to handle
+      multiple priorities to meet deadlines and targets.
       <br />
-      I specialise as a Fullstack Developer leveraging React, Ruby on Rails,
-      Typescript, and more to craft seamless digital experiences.
+      I specialise in Fullstack Development, leveraging expertise in
+      cutting-edge technologies including React, Ruby on Rails, and .NET, to
+      craft seamless digital experiences.
     </p>
     <h2 i18n class="text-xl font-bold mt-4">Skills</h2>
-    <article class="mt-4">
+    <article class="mt-4 print:m-0">
       <h3 i18n class="text-lg font-bold">Programming Languages</h3>
-      <div class="mt-2 flex flex-wrap">
-        <a href="https://react.dev/">
+      <p class="hidden print:block">
+        React, Javascript, HTML5, CSS3, Ruby on Rails, C# .NET
+      </p>
+      <div class="mt-2 flex flex-wrap print:m-0">
+        <a href="https://react.dev/" class="print:hidden">
           <i
             class="ri-reactjs-fill ri-3x text-black hover:text-blue-600 bg-white h-16 w-16 p-2 rounded-full flex items-center m-2"
           ></i
         ></a>
         <i
-          class="ri-javascript-line ri-3x text-black bg-white hover:bg-yellow-300 h-16 w-16 p-2 rounded-full flex items-center m-2"
+          class="ri-javascript-line ri-3x text-black bg-white hover:bg-yellow-300 h-16 w-16 p-2 rounded-full flex items-center m-2 print:hidden"
         ></i>
         <i
-          class="ri-html5-fill ri-3x text-black hover:text-white bg-white hover:bg-orange-400 h-16 w-16 p-2 rounded-full flex items-center m-2"
+          class="ri-html5-fill ri-3x text-black hover:text-white bg-white hover:bg-orange-400 h-16 w-16 p-2 rounded-full flex items-center m-2 print:hidden"
         ></i>
         <i
-          class="ri-css3-fill ri-3x text-black hover:text-white bg-white hover:bg-blue-500 h-16 w-16 p-2 rounded-full flex items-center m-2"
+          class="ri-css3-fill ri-3x text-black hover:text-white bg-white hover:bg-blue-500 h-16 w-16 p-2 rounded-full flex items-center m-2 print:hidden"
         ></i>
-        <a href="https://rubyonrails.org/"
+        <a href="https://rubyonrails.org/" class="print:hidden"
           ><img
             src="https://www.shareicon.net/data/256x256/2015/08/30/93005_on_395x512.png"
             class="h-16 w-16 bg-white p-2 rounded-full m-2 hover:bg-red-600"
             alt="Rails Logo, with text at bottom saying rails, and logo on top in black and white"
         /></a>
-        <a href="https://dotnet.microsoft.com/en-us/"
+        <a href="https://dotnet.microsoft.com/en-us/" class="print:hidden"
           ><img
             src="https://learn.microsoft.com/en-us/media/logos/logo_net.svg"
             class="h-16 w-16 bg-white p-2 rounded-full m-2 grayscale hover:grayscale-0"
@@ -51,7 +55,7 @@
         /></a>
       </div>
     </article>
-    <article class="mt-4">
+    <article class="mt-4 print:m-0">
       <h3 i18n class="text-lg font-bold">Software Packages</h3>
       <div class="flex content-center flex-wrap">
         <a
@@ -88,193 +92,18 @@
     </article>
 
     <article>
-      <h3 i18n class="mt-4 font-bold">Languages</h3>
+      <h3 i18n class="mt-4 font-bold print:m-0">Languages</h3>
 
       <p i18n>Bilingual English and German. GCSE French and Spanish</p>
     </article>
   </div>
-  <div
-    class="lg:w-1/2 p-4 md:max-h-[75vh] 2xl:max-h-[80vh] lg:overflow-y-scroll"
-  >
-    <h2 i18n class="text-xl font-bold">Timeline</h2>
-    <article class="mt-2">
-      <div class="flex justify-between flex-col-reverse md:flex-row">
-        <h3 class="text-lg">Software Developer at AEON Geoscience Systems</h3>
-        <p class="italic text-gray-600 dark:text-gray-300 mr-8">
-          September 2022 - August 2023
-        </p>
-      </div>
-      <ul class="list-disc ml-4">
-        <li>
-          Extensively worked with React and Ruby on Rails to upgrade and extend
-          the existing PROEX web application. Including developing new
-          components, implementing bug fixes, and improving application
-          performance.
-        </li>
-        <li>
-          Utilised D3.js package to create multiple graphs, well log tracks, and
-          data dashboards to enable the visualization and comparison of
-          complicated datasets as part of a £70k+ client project prior to my
-          redundancy.
-        </li>
-        <li>
-          Revamped the visual design of the application with Figma as a rapid
-          prototyping tool, working within a company-standard design template.
-        </li>
-        <li>
-          Implemented a completely new self-sign up process including email
-          confirmation using SendGrid
-        </li>
-        <li>
-          Established complete build, linting, and testing pipelines as well as
-          docker containerization of the application.
-        </li>
-      </ul>
-    </article>
-    <article class="mt-2">
-      <div class="flex justify-between flex-col-reverse md:flex-row">
-        <h3 class="text-lg">IT & Business Support at DK AVS</h3>
-        <p class="italic text-gray-600 dark:text-gray-300 mr-8">
-          June 2018 - September 2022
-        </p>
-      </div>
-      <ul class="list-disc ml-4">
-        <li>
-          Worked extensively in React, HTML, CSS, ES2023 JavaScript, and Redux,
-          to enhance company web systems, including improved user interfaces and
-          increased website speed.
-        </li>
-        <li>
-          Optimised job-request process, resulting in 1,200+ TV repair requests
-          being recorded, verified, and pre-arranged through an automated
-          portal, leading to a 25% increase in customer communication efficiency
-          and a reduction of manual labour.
-        </li>
-        <li>
-          Oversaw comprehensive overhaul and implementation of the company's
-          Enterprise Resource Planning system, including crafting comprehensive
-          written proposals for key clients, providing on-call support during
-          the transition period, and establishing new procedures and processes,
-          culminating in the successful completion of the project.
-        </li>
-        <li>
-          Assumed the role of Senior Developer, providing external clients with
-          consulting services to set up new ERP & CRM Systems in Superbase NG,
-          migrating from Superbase Classic.
-        </li>
-        <li>
-          Spearheaded online marketing campaign resulting in 4,000 new users on
-          the DK AVS website, resulting in a 20\% increase in first-time
-          customer service requests.
-        </li>
-      </ul>
-    </article>
-
-    <article title="My Projects" id="projects">
-      <h2 i18n class="text-xl mt-4 font-bold">My Projects</h2>
-
-      <h3 i18n class="text-lg mt-4 italic">Portfolio & CV</h3>
-      <div class="flex space-x-2 my-2">
-        <span class="bg-gray-500 px-2 rounded-full">Angular</span
-        ><span class="bg-gray-500 px-2 rounded-full">Tailwind</span
-        ><span class="bg-gray-500 px-2 rounded-full">Github Actions</span>
-      </div>
-      <p>
-        A static website built in Angular to host my CV, and for use as a
-        portfolio. Key deliverables included: a fully responsive design,
-        automatic dark-light mode toggles, and automatic deployments.
-      </p>
-      <p>
-        Tailwind CSS helped with the styling, the deployment to Cloudflare Pages
-        was done using Github Actions
-      </p>
-
-      <h3 i18n class="text-lg mt-4 italic">Django Blog and Library Project</h3>
-      <div class="flex space-x-2 my-2">
-        <span class="bg-gray-500 px-2 rounded-full">Python</span
-        ><span class="bg-gray-500 px-2 rounded-full">Bulma</span
-        ><span class="bg-gray-500 px-2 rounded-full">Github Actions</span
-        ><span class="bg-gray-500 px-2 rounded-full">Azure</span>
-      </div>
-      <p>
-        Based on the MDN Django Tutorial this pair of apps is a foray into
-        Python development, hosted on Azure Web Apps and deployed via both
-        Github Actions and Gitlab Runners. Using Bulma UI for styling.
-        Furthermore this process was outlined in a LinkedIn article.
-        <a
-          href="https://www.linkedin.com/pulse/building-library-site-blog-azure-django-nikolaus-maxim-zolnhofer"
-          class="underline"
-          target="_blank"
-          >here</a
-        >.<i class="ml-1 ri-external-link-line print:hidden"></i>
-      </p>
-
-      <img
-        src="https://www.nikmaxott.org/wp-content/uploads/2023/09/Screenshot-2023-09-18-at-14-25-39-Django-Blog.png"
-        width="640"
-        height="auto"
-        class="ml-auto mr-auto mt-8 print:hidden"
-        alt="Screenshot of a blog post in the Django Blog Project"
-      />
-
-      <h3 i18n class="text-lg mt-4 italic">
-        Repair Portal - ERP System for TV Repairs
-      </h3>
-      <div class="flex space-x-2 my-2">
-        <span class="bg-gray-500 px-2 rounded-full">React</span
-        ><span class="bg-gray-500 px-2 rounded-full">Superbase</span>
-      </div>
-      <p>
-        A project with a React frontend, and a custom Superbase backend, with
-        full authentication and user management. Hosted on premises, highlights
-        include allowing field technicians to take pictures, get customer
-        signatures, and optimisation of drivers daily routes based on starting
-        and ending location, including parts pickup.
-      </p>
-
-      <img
-        src="https://i0.wp.com/www.nikmaxott.org/wp-content/uploads/2022/07/Screenshot-2022-07-31-at-13-18-15-Superbase-Repair-Portal.png"
-        width="640"
-        height="auto"
-        class="ml-auto mr-auto mt-8 print:hidden"
-        alt="Screenshot of Superbase Repair Portal, showing Account Settings"
-      />
-
-      <h3 i18n class="text-lg mt-4 italic">
-        Superbase Shop - SaaS Shop Design
-      </h3>
-      <div class="flex space-x-2 my-2">
-        <span class="bg-gray-500 px-2 rounded-full">Gatsby</span
-        ><span class="bg-gray-500 px-2 rounded-full">Bootstrap</span>
-        <span class="bg-gray-500 px-2 rounded-full">Auth0</span>
-      </div>
-      <p>
-        A project where I used Gatsby.JS to create a static site, hosted
-        on-premises. The site showcases several key products of the Superbase
-        brand. This project was a nice challenge and a change of pace from my
-        normal work at the time, and showcases my stylistic choices, preferring
-        a minimal look.
-      </p>
-      <p class="mt-8 mb-8">
-        Live Link:
-        <a
-          href="https://shop.superbase.com/"
-          class="underline mr-1"
-          target="_blank"
-          >shop.superbase.com</a
-        ><i class="ri-external-link-line print:hidden"></i>
-      </p>
-      <img
-        src="https://i0.wp.com/www.nikmaxott.org/wp-content/uploads/2022/07/image-2.png"
-        width="640"
-        height="auto"
-        class="ml-auto mr-auto mt-8 print:hidden"
-        alt="Screenshot of shop.superbase.com showcasing the Repair Portal product"
-      />
-    </article>
+  <div class="lg:w-1/2 px-6 py-4 print:p-0">
+    <h2 i18n class="text-xl font-bold print:mt-4">Timeline</h2>
+    <app-timeline />
+    <app-projects />
 
     <article title="Education">
-      <h2 i18n class="text-xl mt-4 font-bold">Education</h2>
+      <h2 i18n class="text-xl mt-4 font-bold print:m-0">Education</h2>
       <p i18n class="font-extrabold">
         BEng in Mechanical Engineering at University of Aberdeen
       </p>
