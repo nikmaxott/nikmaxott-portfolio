@@ -7,7 +7,6 @@ import { ProjectsComponent } from '../projects/projects.component';
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
   imports: [CommonModule, TimelineComponent, ProjectsComponent],
 })
 export class HomeComponent {}
