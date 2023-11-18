@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommonModule } from '@angular/common';
 import { TimelineComponent } from './timeline.component';
 
 describe('TimelineComponent', () => {
@@ -8,7 +8,7 @@ describe('TimelineComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [TimelineComponent],
+      imports: [CommonModule, TimelineComponent],
     });
     fixture = TestBed.createComponent(TimelineComponent);
     component = fixture.componentInstance;
@@ -16,6 +16,11 @@ describe('TimelineComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
+  });
+
+  it('should have timelineData', () => {
+    expect(component.timelineData).toBeDefined();
+    expect(component.timelineData.length).toBeGreaterThan(0);
   });
 });

@@ -11,9 +11,12 @@
     </div>
     <p>{{ project.description }}</p>
     <p class="mt-8 mb-8 print:m-0" *ngIf="project.link">
-      <a href="{{ project.link.url }}" class="underline mr-1" target="_blank">{{
-        project.link.text
-      }}</a
+      <a
+        href="{{ project.link.url }}"
+        class="underline mr-1"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{{ project.link.text }}</a
       ><i class="ri-external-link-line print:hidden"></i>
     </p>
     <img

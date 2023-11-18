@@ -18,4 +18,12 @@ describe('ProjectsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have projects defined', () => {
+    expect(component.projects).toBeDefined();
+  });
+
+  it('should have at least one project', () => {
+    expect(component.projects.length).toBeGreaterThan(0);
+  });
 });

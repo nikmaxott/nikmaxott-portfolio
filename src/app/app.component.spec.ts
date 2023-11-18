@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
@@ -20,22 +20,25 @@ describe('AppComponent', () => {
     expect(component).toBeDefined();
   });
 
-  it('should have the dark mode toggle default', () => {
+  it('should have a title', () => {
+    expect(component.title).toEqual('nikmaxott-portfolio');
+  });
+
+  it('should have isDarkEnable set to true if theme is dark', () => {
+    spyOn(window.localStorage, 'getItem').and.returnValue('dark');
+    expect(component.isDarkEnable).toBeTrue();
+  });
+
+  it('should have isDarkEnable set to false if theme is not dark', () => {
+    spyOn(window.localStorage, 'getItem').and.returnValue('light');
     expect(component.isDarkEnable).toBeFalse();
   });
 
-  it('should be able to toggle dark mode', fakeAsync(() => {
-    spyOn(component, 'toggleDarkMode');
-
-    // Component toggle tests
+  it('should toggle the dark mode', () => {
+    spyOn(window.localStorage, 'getItem').and.returnValue('light');
+    spyOn(window.localStorage, 'setItem');
     component.toggleDarkMode();
-    expect(component.isDarkEnable).toBeFalse();
-
-    // DOM Test
-    const button: HTMLButtonElement =
-      fixture.nativeElement.querySelector('button');
-    button.dispatchEvent(new Event('click'));
-
-    expect(component.toggleDarkMode).toHaveBeenCalledTimes(2);
-  }));
+    expect(component.isDarkEnable).toBeTrue();
+    expect(window.localStorage.setItem).toHaveBeenCalledWith('theme', 'dark');
+  });
 });
