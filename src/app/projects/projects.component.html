@@ -1,0 +1,30 @@
+<article title="My Projects" id="projects">
+  <h2 i18n class="text-xl mt-4 font-bold">My Projects</h2>
+  <div *ngFor="let project of projects" class="mt-8 print:m-0">
+    <h3 i18n class="text-lg mt-4 italic">{{ project.title }}</h3>
+    <div class="flex space-x-2 my-2 print:m-0">
+      <span
+        *ngFor="let tech of project.technologies"
+        class="bg-gray-500 px-2 rounded-full print:hidden"
+        >{{ tech }}</span
+      >
+    </div>
+    <p>{{ project.description }}</p>
+    <p class="mt-8 mb-8 print:m-0" *ngIf="project.link">
+      <a
+        href="{{ project.link.url }}"
+        class="underline mr-1"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{{ project.link.text }}</a
+      ><i class="ri-external-link-line print:hidden"></i>
+    </p>
+    <img
+      src="{{ project.image?.src }}"
+      width="640"
+      height="auto"
+      class="ml-auto mr-auto mt-8 print:hidden"
+      alt="{{ project.image?.alt }}"
+    />
+  </div>
+</article>
