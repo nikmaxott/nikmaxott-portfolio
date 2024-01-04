@@ -10,8 +10,18 @@ import { CommonModule } from '@angular/common';
 export class TimelineComponent {
   timelineData = [
     {
+      title: 'Fullstack Software Engineer',
+      date: 'January 2024 - Present',
+      description: [
+        "Spearheading the development and optimization of AISUS's Gemini Platform, enhancing its functionality and performance.",
+        'Leading the integration efforts of Machine Learning and Computer Vision technologies into daily operations.',
+        'Collaborating closely with cross-functional teams to ideate and implement innovative solutions, resulting in streamlined processes and increased productivity.',
+        'Actively contributing to the technological roadmap, identifying opportunities for enhancements and future-proofing the software infrastructure'
+      ]
+    },
+    {
       title: 'Senior Software Engineer at eCERTO (Contract)',
-      date: 'October 2023 - January 2024',
+      date: 'October 2023 - December 2023',
       description: [
         'Managed and directed the technology team, instituting new software development practices upon transitioning development operations in house.',
         'Provided leadership and guidance to Junior and Associate engineers, mentoring them in best practices and conducting comprehensive code reviews to maintain high standards of work.',
